@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="style1sheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>Employee List</title>
+</head>
+
+<body>
+      <div class="row g-0">
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+              <img src="{{employees.photoUrl}}" alt="Profile Image" class="profile"> 
+          </div> 
+          <div class="col ps-2">
+              <div class="row g-0">
+                  <div class="col-md-10 text-center">
+                      <span class="name">{{employees.name | titlecase}} </span> 
+                      <!-- <button type="button" class="btn btn-outline-success"  style="margin-right: 20px;"
+                      (click)="openModal(employees.id)">Edit</button> -->
+              
+                  </div>
+
+              </div>
+              <div class="row g-0 mt-3">
+  
+                  <div class="col-md">
+  
+                      <table class="table table-hover mx-auto">
+                          <thead class="text-center fs-5 fst-italic text-secondary">
+                              <tr>
+                                  <td colspan="2"> Details</td>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td >mailid : {{employees.emailid}}</td> 
+                                  <td>department : {{employees.department.name}}</td>
+                                 
+                              
+                              </tr>
+                              <tr>
+                                  <td>mobile no : {{employees.phoneno}}</td>
+                                   <td>address : {{employees.address}}</td>
+                               
+                              </tr>
+                              <tr>
+                                  <td>manager name :{{employees?.manager.name}}</td>
+                                  
+                              </tr>  
+                              <br><br>  
+                           
+                          </tbody>
+                      </table>
+  
+                  </div>
+              </div>
+          </div>
+      </div> 
+
+     
+  
+    <!----buttons------->
+      <div class="row g-0">
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <div class="container">
+            <div class="row">
+          <button class="button job">Jobs</button>
+          <button class="button personal-details">Personal </button>
+          <button class="button education">Education</button>
+          </div>
+          </div>
+          </div> 
+          <div class="col ps-2">
+              <div class="row g-0">
+                  <div class="col-md-10 text-center">
+                    
+                    
+                  </div>
+              </div>
+
+              <!--jobs--> 
+              <div id="Employee-job-details">
+              <div class="row g-0 mt-3">
+  
+                  <div class="col-md">
+  
+                      <table class="table table-hover mx-auto">
+                          <thead class="text-center fs-5 fst-italic text-secondary">
+                              <tr>
+                                  <td colspan="2"> Details</td>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td > Employee id : {{employees.id}}</td> 
+                                  <td>department : {{employees.department.name}}</td>
+                                 
+                              
+                              </tr>
+                              <tr>
+                                  <td>Employee status : {{employees.employee_status}}</td>
+                                   <td>Employee type : {{employees.employee_type}}</td>
+                               
+                              </tr>
+                              <tr>
+                                  <td> Designation :{{employees.jobtitle}}</td>
+                                  <td> Performance :{{employees.performance}}</td>
+                                  
+                              </tr>  
+                              <br><br>  
+                           
+                          </tbody>
+                      </table>
+  
+                  </div>
+              </div>  
+              </div>
+              </div>
+              </div> 
+              
+              
+
+<!----personal --> 
+
+
+<div id="Employee-personal-details">
+
+  <div id="job-dfetails">
+    <div class="row g-0 mt-3">
+
+        <div class="col-md">
+
+            <table class="table table-hover mx-auto">
+                <thead class="text-center fs-5 fst-italic text-secondary">
+                    <tr>
+                        <td colspan="2"> Details</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td > Address : {{employees.address}}</td> 
+                        <td>Emailid:{{employees.emailid}}</td> 
+                        <td> Blood group:{{employees.bloodgroup}}</td>
+                      
+                       
+                    
+                    </tr>
+                    <tr>
+                        <td>Fathername: {{employees.fathername}}</td>
+                         <td>Phoneno: {{employees.phoneno}}</td> 
+                         <td>Mothername : {{employees.mothername}}</td>
+                     
+                    </tr>
+                    <tr>
+                         <td> Salary: {{employees.salary}}</td>
+                        <td> Gender : {{employees.gender}}</td>  
+                        <td>Birthday:{{employees.dob}}</td>   
+                    </tr>  
+                    <br><br>  
+                 
+                </tbody>
+            </table>
+
+        </div>
+  </div>      
+  </div>
+  </div>  
+ <!---education detatils--> 
+
+ 
+
+
+
+
+
+
+
+
+      
+
+  </body>
+  </html>
+
+
+  
+     
+    

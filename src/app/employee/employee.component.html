@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee List</title>
+</head>
+<body>
+    <div style="margin-top: 30px">
+     <form class="d-flex form-container" [formGroup]="form">
+          <input
+            class="form-control me-2 search-input"
+            formControlName="search"
+            id="search"
+            name="search"
+            type="text"
+            placeholder="Search Employee By Name"
+            class="form-control"
+            [(ngModel)]="query"
+          />
+          <button
+            class="btn btn-outline-success search-button"
+            type="button"
+            (click)="searchUser()"
+          >
+            Search
+          </button>
+        </form>
+        </div>
+
+  <section *ngFor="let emp of employee">
+    <div class="container flex" (click)="ViewEmployee(emp.id)">
+       
+      <div class="row g-0"> 
+        <button type="button" class="btn btn-outline-danger"  style="margin-right: 20px;"
+        (click)="deleteUser(emp.id)">delete</button>
+        <button type="button" class="btn btn-outline-success"  style="margin-right: 20px;"
+        (click)="editEmployee(emp.id)">Edit</button>
+        <div class="container flex" (click)="ViewEmployee(emp.id)">
+
+          <div class="col-md-2 d-flex justify-content-center align-items-center">
+              <img src="{{emp?.photoUrl}}" alt="Profile Image" class="profile">
+          </div>
+  
+          <div class="col ps-2">
+  
+              <div class="row g-0">
+  
+                  <div class="col-md-10 text-center">
+                      <span class="name">{{emp?.name | titlecase}} </span>
+                  </div>
+  
+                  <div class="col-md-2 d-flex justify-content-center align-items-center">
+                      <div class="btn-group" role="group">
+                          
+                      </div>
+                  </div>
+  
+              </div>
+  
+              <div class="row g-0 mt-3">
+  
+                  <div class="col-md">
+  
+                      <table class="table table-hover mx-auto">
+                          <thead class="text-center fs-5 fst-italic text-secondary">
+                              <tr>
+                                  <td colspan="2">Details</td>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>{{emp?.jobtitle}}</td>
+                              
+                              </tr>
+                              <tr>
+                                  <td>{{emp?.department?.name}}</td>
+                               
+                              </tr>
+                              <tr>  
+                               
+                                <td>mailid: {{emp?.emailid}}</td> 
+<!--                                  
+                                   <td></td> -->
+                              </tr>
+                          </tbody>
+                      </table> 
+  
+                  </div>
+  
+                 
+  
+              </div>
+  
+          </div>
+  
+      </div>
+  
+  </div>
+  </div>
+  </section> 
+  </body>
+  </html>

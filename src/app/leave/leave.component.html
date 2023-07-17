@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leave Application Form</title>
+  <style>
+    /* CSS Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="date"],
+    select {
+      padding: 5px;
+      font-size: 16px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    select {
+      width: 220px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2>Leave Application Form</h2>
+  <form>
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" name="start-date" required>
+
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" name="end-date" required>
+
+    <label for="reason">Reason:</label>
+    <select id="reason" name="reason" required>
+      <option value="">Select Reason</option>
+      <option value="sick">Sick</option>
+      <option value="earned">Earned</option>
+      <option value="paternity">Paternity</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

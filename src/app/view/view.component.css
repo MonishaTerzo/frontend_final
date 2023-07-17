@@ -1,0 +1,77 @@
+#modal{
+  display:none;
+} 
+.black-border {
+  border: 1px solid black;
+}
+
+img { 
+  border-radius: 50%;
+  width: 200px; 
+  height: 200px; 
+}
+
+
+ table {
+  width: 90%;
+} 
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 3px;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 0px 2rem; 
+  margin-right: 70px;
+}
+
+.flex{
+  display: flex;
+  float: left;
+  margin: 20px;
+}
+
+.container{
+  border:0px; 
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+  padding: 20px;
+}
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+.jobs {
+  background-color: gray; 
+  margin-bottom: 20px;;
+}
+
+.personal-details {
+  background-color:grey; 
+  margin-bottom: 20px;
+  
+}
+.personal{ 
+  display: none;
+}
+.education {
+  background-color:grey;
+}
+.job-details{ 
+  display: block;
+} 
+.employee-job-details{ 
+  display: block;
+} 
+.employee-personal-details{ 
+  display: none;
+}
